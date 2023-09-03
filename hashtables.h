@@ -1,14 +1,9 @@
 #ifndef HASHTABLES_H
-
 #define HASHTABLES_H
-
-
-
 #include <iostream>
+using namespace std ;   
+using std::string;
 #include <cstdlib>
-using std::string
-using namespace std ; 
-
 class  hash
 {
     private:        
@@ -17,12 +12,16 @@ class  hash
             string name ; 
             string drink ;
             item *next ;
-        }
+        } ; 
         item * hashtable[tablesize] ; //hash is array with list pointers 
     
 
     public:
         hash();
         int Hash(string key); 
+        void AddItem(string name , string drink) ; 
+        int NumberOfItems(int index) ; 
+        void PrintTable() ; 
 };
 
+#endif
